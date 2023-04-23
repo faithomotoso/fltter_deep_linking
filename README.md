@@ -1,6 +1,7 @@
 # flttr_deep_linking
 
-A new Flutter project.
+For `iOS`, test with `xcrun simctl openurl booted "migo-igo://com.example.flttr_deep_linking/deep"`
+For `Android` test with `xcrun simctl openurl booted "migo-igo://com.example.flttr_deep_linking/deep"`
 
 ## Getting Started
 
