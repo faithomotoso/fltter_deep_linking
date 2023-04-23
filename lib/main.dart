@@ -1,4 +1,5 @@
 import 'package:flttr_deep_linking/deep_page.dart';
+import 'package:flttr_deep_linking/registration_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,7 +9,15 @@ void main() {
 
 GoRouter _router = GoRouter(routes: [
   GoRoute(path: "/", builder: (ctx, state) => MyHomePage(), routes: [
-    GoRoute(path: "deep", builder: (ctx, state) => IosDeepPage())
+    GoRoute(path: "deep", builder: (ctx, state) => IosDeepPage()),
+    GoRoute(path: "registration", builder: (ctx, state) {
+      Map<String, String> params = state.queryParams;
+      return RegistrationPage(
+        email: params["email"],
+        firstName: params["fname"],
+        lastName: params["lname"],
+      );
+    })
   ]),
   // GoRoute(path: "/ios-no-home", builder: (ctx, state) => IosDeepPage())
 ], debugLogDiagnostics: true);

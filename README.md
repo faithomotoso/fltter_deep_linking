@@ -1,7 +1,17 @@
 # flttr_deep_linking
 
 For `iOS`, test with `xcrun simctl openurl booted "migo-igo://com.example.flttr_deep_linking/deep"`
-For `Android` test with `xcrun simctl openurl booted "migo-igo://com.example.flttr_deep_linking/deep"`
+For `Android` test with `adb shell 'am start -W -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "migo-igo://com.example.flttr_deep_linking/ios-deep"'`
+
+### Registration deep link
+For `iOS`, test with `xcrun simctl openurl booted "migo-igo://com.example.flttr_deep_linking/registration?fname=Stevenson&lname=Jose&email=s@imail.com"`
+For `Android` test with `adb shell 'am start -W -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "migo-igo://com.example.flttr_deep_linking/registration?fname=A&lname=Droid&email=droid@amail.com"'`
+
+
+### Useful links
+https://blog.logrocket.com/understanding-deep-linking-flutter-uni-links/ - Contains iOS custom urls & Android deep links, removes the need to host app-links json files on a website
+
+https://docs.flutter.dev/development/ui/navigation/deep-linking
 
 ## Getting Started
 
